@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>CleanArchitecture.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- A camada de aplicação depende apenas do domínio (regra de dependência). -->
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+</Project>
