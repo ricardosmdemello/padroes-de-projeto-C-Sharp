@@ -10,7 +10,7 @@ namespace CleanArchitecture.Domain;
 public sealed class Product
 {
     public Guid Id { get; }
-    public string Name { get; private set; }
+    public string Name { get; private set; } = string.Empty;
     public decimal Price { get; private set; }
 
     public Product(Guid id, string name, decimal price)

@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Adapters.Cli/Adapters.Cli.csproj" />
+    <Project Path="src/Adapters.Persistence/Adapters.Persistence.csproj" />
+    <Project Path="src/Core/Core.csproj" />
+  </Folder>
+</Solution>

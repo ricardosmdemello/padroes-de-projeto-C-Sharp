@@ -13,6 +13,11 @@ enxuto, comentado e cada projeto demonstra **um** padrão isoladamente.
 > e *Memento* estão documentados na seção [Roadmap](#roadmap) para inclusão
 > futura.
 
+> **Padrões arquiteturais:** além dos padrões GoF (nível de classe), o diretório
+> [`architecture/`](architecture/README.md) traz exemplos executáveis de
+> **arquiteturas de aplicação** — Clean Architecture, CQRS + MediatR, Hexagonal
+> (Ports & Adapters) e DDD tático. Veja o [README de arquitetura](architecture/README.md).
+
 ---
 
 ## Sumário
@@ -47,9 +52,14 @@ dotnet --version
 
 ```
 padroes-de-projeto-C-Sharp/
-├── DesignPatterns.slnx          # Solução com todos os projetos
+├── DesignPatterns.slnx          # Solução com todos os padrões GoF
 ├── README.md
 ├── .gitignore
+├── architecture/                # Padrões arquiteturais (soluções independentes)
+│   ├── CleanArchitecture/
+│   ├── Cqrs/
+│   ├── Hexagonal/
+│   └── Ddd/
 └── src/
     ├── Creational/              # Padrões criacionais
     │   ├── Singleton/

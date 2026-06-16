@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Hexagonal.Adapters.Persistence</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- O adaptador depende do núcleo (das portas), nunca o contrário. -->
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+</Project>
