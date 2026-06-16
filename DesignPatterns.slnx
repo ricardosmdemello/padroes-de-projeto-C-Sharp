@@ -3,8 +3,10 @@
   <Folder Name="/src/Behavioral/">
     <Project Path="src/Behavioral/ChainOfResponsibility/ChainOfResponsibility.csproj" />
     <Project Path="src/Behavioral/Command/Command.csproj" />
+    <Project Path="src/Behavioral/Interpreter/Interpreter.csproj" />
     <Project Path="src/Behavioral/Iterator/Iterator.csproj" />
     <Project Path="src/Behavioral/Mediator/Mediator.csproj" />
+    <Project Path="src/Behavioral/Memento/Memento.csproj" />
     <Project Path="src/Behavioral/Observer/Observer.csproj" />
     <Project Path="src/Behavioral/State/State.csproj" />
     <Project Path="src/Behavioral/Strategy/Strategy.csproj" />
@@ -26,5 +28,8 @@
     <Project Path="src/Structural/Facade/Facade.csproj" />
     <Project Path="src/Structural/Flyweight/Flyweight.csproj" />
     <Project Path="src/Structural/Proxy/Proxy.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/PatternMenu/PatternMenu.csproj" />
   </Folder>
 </Solution>

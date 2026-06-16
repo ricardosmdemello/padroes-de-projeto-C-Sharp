@@ -1,17 +1,15 @@
 # Padrões de Projeto em C# (.NET)
 
 Catálogo prático dos **23 padrões de projeto clássicos do GoF** (*Gang of Four*),
-implementados em C# com **.NET 8**. Cada padrão é um projeto executável,
+todos implementados em C# com **.NET 8**. Cada padrão é um projeto executável,
 independente e documentado, com um exemplo de uso real que pode ser rodado pelo
 terminal.
 
 O objetivo é servir como material de estudo e referência rápida: o código é
 enxuto, comentado e cada projeto demonstra **um** padrão isoladamente.
 
-> Estão implementados **21 padrões** (todos os criacionais, estruturais e
-> comportamentais com implementação idiomática em C#). Os padrões *Interpreter*
-> e *Memento* estão documentados na seção [Roadmap](#roadmap) para inclusão
-> futura.
+> Estão implementados os **23 padrões** GoF: 5 criacionais, 7 estruturais e
+> 11 comportamentais, com implementação idiomática em C#.
 
 > **Padrões arquiteturais:** além dos padrões GoF (nível de classe), o diretório
 > [`architecture/`](architecture/README.md) traz exemplos executáveis de
@@ -60,6 +58,8 @@ padroes-de-projeto-C-Sharp/
 │   ├── Cqrs/
 │   ├── Hexagonal/
 │   └── Ddd/
+├── tools/
+│   └── PatternMenu/             # Menu interativo que roda qualquer padrão
 └── src/
     ├── Creational/              # Padrões criacionais
     │   ├── Singleton/
@@ -78,8 +78,10 @@ padroes-de-projeto-C-Sharp/
     └── Behavioral/              # Padrões comportamentais
         ├── ChainOfResponsibility/
         ├── Command/
+        ├── Interpreter/
         ├── Iterator/
         ├── Mediator/
+        ├── Memento/
         ├── Observer/
         ├── State/
         ├── Strategy/
@@ -99,6 +101,37 @@ com seu próprio `Program.cs` que demonstra o padrão em execução.
 ```bash
 dotnet build DesignPatterns.slnx
 ```
+
+### Menu interativo (recomendado)
+
+A forma mais simples de explorar: um menu único de console que lista os 23
+padrões por categoria e executa o que você escolher (ou todos em sequência).
+
+```bash
+dotnet run --project tools/PatternMenu
+```
+
+```
+╔════════════════════════════════════════════╗
+║       PADRÕES DE PROJETO (GoF) EM C#         ║
+╚════════════════════════════════════════════╝
+
+  Criacionais
+     1. Singleton
+     2. Factory Method
+     ...
+  Estruturais
+     6. Adapter
+     ...
+  Comportamentais
+    13. Chain of Responsibility
+    ...
+
+     A. Executar TODOS em sequência
+     0. Sair
+```
+
+Cada padrão também pode ser executado isoladamente (abaixo).
 
 ### Executar um padrão específico
 
@@ -131,6 +164,8 @@ dotnet run --project src/Behavioral/State
 dotnet run --project src/Behavioral/ChainOfResponsibility
 dotnet run --project src/Behavioral/Iterator
 dotnet run --project src/Behavioral/Visitor
+dotnet run --project src/Behavioral/Memento
+dotnet run --project src/Behavioral/Interpreter
 ```
 
 ---
@@ -174,8 +209,10 @@ descrevendo padrões de comunicação.
 |--------|----------|---------------------------|
 | **Chain of Responsibility** | Passar uma requisição por uma cadeia de handlers até que um a trate. | Escalonamento de chamados de suporte (N1 → N2 → Gerência). |
 | **Command** | Encapsular uma requisição como objeto, permitindo desfazer (*undo*). | Editor de texto com histórico de comandos. |
+| **Interpreter** | Avaliar sentenças de uma linguagem a partir de sua gramática. | Interpretador de expressões aritméticas (RPN). |
 | **Iterator** | Acessar elementos de uma coleção sequencialmente sem expor sua estrutura. | Travessia *in-order* de uma árvore binária via `IEnumerable<T>`. |
 | **Mediator** | Centralizar a comunicação entre objetos, reduzindo o acoplamento. | Sala de chat coordenando usuários. |
+| **Memento** | Capturar e restaurar o estado interno de um objeto sem violar o encapsulamento. | Editor com checkpoints e desfazer. |
 | **Observer** | Notificar automaticamente dependentes quando o estado muda. | Estação meteorológica com displays inscritos. |
 | **State** | Alterar o comportamento de um objeto conforme seu estado interno. | Ciclo de vida de um pedido (Novo → Pago → Enviado → Entregue). |
 | **Strategy** | Encapsular algoritmos intercambiáveis e selecioná-los em tempo de execução. | Formas de pagamento (cartão, Pix, boleto). |
@@ -205,10 +242,11 @@ Convenções adotadas:
 
 ## Roadmap
 
-Padrões comportamentais clássicos do GoF ainda não incluídos:
+Os **23 padrões GoF** estão implementados. Próximos passos possíveis:
 
-- [ ] **Memento** — capturar e restaurar o estado interno de um objeto.
-- [ ] **Interpreter** — avaliar sentenças de uma linguagem/gramática.
+- [ ] Testes unitários (xUnit) cobrindo cada padrão.
+- [ ] README individual por padrão com diagrama (Mermaid/UML).
+- [ ] Exemplos de resiliência (Polly) e persistência real (EF Core).
 
 Contribuições seguindo a mesma estrutura (um projeto por padrão, com `Program.cs`
 demonstrativo) são bem-vindas.

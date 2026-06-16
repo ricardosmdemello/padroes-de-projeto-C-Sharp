@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>PatternMenu</RootNamespace>
+    <!-- Os padrões referenciados são executáveis usados aqui como bibliotecas. -->
+    <NoWarn>$(NoWarn);NETSDK1147</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Criacionais -->
+    <ProjectReference Include="..\..\src\Creational\Singleton\Singleton.csproj" />
+    <ProjectReference Include="..\..\src\Creational\FactoryMethod\FactoryMethod.csproj" />
+    <ProjectReference Include="..\..\src\Creational\AbstractFactory\AbstractFactory.csproj" />
+    <ProjectReference Include="..\..\src\Creational\Builder\Builder.csproj" />
+    <ProjectReference Include="..\..\src\Creational\Prototype\Prototype.csproj" />
+    <!-- Estruturais -->
+    <ProjectReference Include="..\..\src\Structural\Adapter\Adapter.csproj" />
+    <ProjectReference Include="..\..\src\Structural\Bridge\Bridge.csproj" />
+    <ProjectReference Include="..\..\src\Structural\Composite\Composite.csproj" />
+    <ProjectReference Include="..\..\src\Structural\Decorator\Decorator.csproj" />
+    <ProjectReference Include="..\..\src\Structural\Facade\Facade.csproj" />
+    <ProjectReference Include="..\..\src\Structural\Flyweight\Flyweight.csproj" />
+    <ProjectReference Include="..\..\src\Structural\Proxy\Proxy.csproj" />
+    <!-- Comportamentais -->
+    <ProjectReference Include="..\..\src\Behavioral\ChainOfResponsibility\ChainOfResponsibility.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\Command\Command.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\Interpreter\Interpreter.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\Iterator\Iterator.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\Mediator\Mediator.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\Memento\Memento.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\Observer\Observer.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\State\State.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\Strategy\Strategy.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\TemplateMethod\TemplateMethod.csproj" />
+    <ProjectReference Include="..\..\src\Behavioral\Visitor\Visitor.csproj" />
+  </ItemGroup>
+
+</Project>
